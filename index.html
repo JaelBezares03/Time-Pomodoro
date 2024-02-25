@@ -4,16 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pomodoro Timer</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Kdam+Thmor+Pro&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">  
 </head>
-<body>
+<body id="body">
 
-  <section class="timer">
+  
+    <div class="secciones">
+      
+      <div class="partes activo " id="focus">Focus</div>
+      <div class="partes breack" id="breack">Break</div>
+      <div class="partes long_breack" id="long_breack">Long Breack</div>
+    </div>
+    <section class="timer">
     <div class="watcher">
         <p id="minutes" class="time">25</p>
-        <p>:</p>
-        <p id="seconds">00</p>
-    </div>
+        <p class="time">:</p>
+        <p id="seconds" class="time">00</p>
+        
+      </div>
 
 
     <div class="to-do-list">

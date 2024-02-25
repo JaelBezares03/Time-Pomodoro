@@ -1,24 +1,24 @@
-var minutos = document.getElementById('minutes');
-var contadorMinutos =25;
-var segundos =  document.getElementById("seconds"); 
-var contadorSegundos = 60;
+var minutosElemento = document.getElementById('minutes');
+var contadorMinutos = 25;
+var segundosElemento = document.getElementById("seconds");
+var contadorSegundos = 59;
 
-//ActualizarContador hace que el contadorSegundos se le vaya restando una unidad
-//sin embargo todavia no es dinamico
-function actualizarContador() {
-    contadorSegundos -= 1;
-    segundos.textContent = contadorSegundos;
+function iniciarTemporizador(min) {
+    var segundosRestantes = min * 60;
+    var intervalo = setInterval(function() {
+        var minutes = Math.floor(segundosRestantes / 60);
+        var seconds = segundosRestantes % 60;
+
+        minutosElemento.textContent = (minutes < 10 ? '0' + minutes : minutes);
+        segundosElemento.textContent = (seconds < 10 ? '0' + seconds : seconds);
+
+        if (segundosRestantes === 0) {
+            clearInterval(intervalo);
+            console.log('temporizador terminado');
+        } else {
+            segundosRestantes--;
+        }
+    }, 1000);
 }
 
-//esta variable hace que al funcion se cambie cada segundo
-var intervalo = setInterval(actualizarContador,1000);
-
-setTimeout(function() {
-    clearInterval(intervalo); // Detenemos el intervalo
-    console.log("Temporizador detenido.");
-    contadorSegundos = 61;
-    actualizarContador()
-    intervalo = setInterval(actualizarContador,1000);
-
-  }, 61000);
-
+iniciarTemporizador(25);

@@ -4,17 +4,20 @@
     --azulClaro : #E0FBFC;
     --negro : #293241;
     --blanco : #ffffff;
+    --fuenteReloj : "Kdam Thmor Pro", 'sans-serif';
+    --fuenteTexto : "Jost", sans-serif;
 }
-body{
+#body{
     width: 100vw;
     height: 100vh;
-    background-color: var(--rojoClaro);
+    background-color: #edf2f4;
     margin: 0;
     padding: 0;
     border: 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 .timer{
     display: grid;
@@ -22,10 +25,47 @@ body{
     grid-template-columns: repeat(1,1fr);
     grid-template-rows:repeat(2,1fr) ;
     align-items: center;
-    border: 10px solid white;
+    border: 10px solid black;
     width: 45%;
+    background-color: white;
 }
 .watcher{
     display: flex;
+    align-items: center;
+    justify-content: center;
     
+}
+.time{
+    font-family: var(--fuenteReloj);
+
+}
+.secciones {
+    display: flex;
+    justify-content: space-around;
+    width: 45%;
+    margin-bottom: 12px;
+}
+.activo{
+    background-color: #0077b6;
+
+    color: white;
+    font-size: 20px;
+}
+.breack{
+    background-color: #81b29a;
+    color: white;
+    font-size: 20px;
+}
+.long_breack{
+    background-color: #3a0ca3;
+    color: white;
+    font-size: 20px;
+}
+.partes{
+    cursor: pointer;
+    padding: 10px;
+    font-family: var(--fuenteTexto);
+    padding: 10px;
+    border: 0;
+    border-radius: 8px;
 }
