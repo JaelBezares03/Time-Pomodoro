@@ -10,7 +10,7 @@
 #body{
     width: 100vw;
     height: 100vh;
-    background-color: #3a86ff;
+    background-color: #86bbd8;
     margin: 0;
     padding: 0;
     border: 0;
@@ -25,9 +25,11 @@
     grid-template-columns: repeat(1,1fr);
     grid-template-rows:repeat(2,1fr) ;
     align-items: center;
-    border: 10px solid black;
+    border: 2px solid white;
     width: 45%;
     background-color: white;
+    border-radius: 5px;
+    position: relative;
 }
 .watcher{
     display: flex;
@@ -37,6 +39,8 @@
 }
 .time{
     font-family: var(--fuenteReloj);
+    font-size: 90px;
+    margin: 0px;
 
 }
 .secciones {
@@ -46,13 +50,13 @@
     margin-bottom: 12px;
 }
 .activo{
-    background-color: #0077b6;
+    background-color: #a3cef1;
 
     color: white;
     font-size: 20px;
 }
 .breack{
-    background-color: #81b29a;
+    background-color: #678d58;
     color: white;
     font-size: 20px;
 }
@@ -73,9 +77,45 @@
  display: flex;
  justify-content: center;   
 }
-.btn_activo{
+/* .btn_activo{
     display: block;
+    
 }
 .btn_escondido{
     display: none;
+     */
+
+#start{
+    
+    padding: 10px 30px;
+    border: 0;
+    border-radius: 7px;
+    background-color: #ef476f;
+    font-family: var(--fuenteTexto);
+    font-size: 30px;
+}
+#stop{
+    
+    padding: 10px 30px;
+    border: 0;
+    border-radius: 7px;
+    background-color: #ffc20e;
+    font-family: var(--fuenteTexto);
+    font-size: 30px;
+}
+.moreTask{
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
+    background-color:#d81159 ;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -20px;
+    right: 46%;
+
+}
+img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
 }
