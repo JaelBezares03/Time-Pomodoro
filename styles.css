@@ -10,7 +10,7 @@
 #body{
     width: 100vw;
     height: 100vh;
-    background-color: #edf2f4;
+    background-color: #3a86ff;
     margin: 0;
     padding: 0;
     border: 0;
@@ -68,4 +68,14 @@
     padding: 10px;
     border: 0;
     border-radius: 8px;
+}
+.start_stop{
+ display: flex;
+ justify-content: center;   
+}
+.btn_activo{
+    display: block;
+}
+.btn_escondido{
+    display: none;
 }
