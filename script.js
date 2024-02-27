@@ -131,7 +131,48 @@ btnLongBreack.addEventListener('click',function(){
 
 });
 
+var input = document.getElementById('inputTaks');
+
+var ul= document.getElementById('listado');
+
+var btnAgregarTarea = document.getElementById('addTask');
 
 
+function agregarTarea(){
+    var tarea = input.value;
+    if (tarea !== ''){
+        var li = document.createElement("li");
+        li.classList.add('lista');
+        var divjuntos = document.createElement("div");
+        divjuntos.classList.add('juntos')
+        var divcontenedor = document.createElement("div");
+        divcontenedor.classList.add('contenedor_svg')
+        var p = document.createElement("p");
+        p.textContent=tarea;
+        var imgcircle = document.createElement("img");
+        imgcircle.src="circle-svgrepo-com.svg"
+        imgcircle.classList.add('svg');
+        var imgcancel = document.createElement("img"); 
+        imgcancel.src="cancel-svgrepo-com.svg"
+        imgcancel.classList.add('svg_cancel')
+        var divcancel = document.createElement('div')
+        divcancel.classList.add('contenedor_svg_cancel')
+        
+        
+        ul.appendChild(li);
+        li.append(divjuntos,divcancel);
+        divjuntos.append(divcontenedor,p)
+        divcontenedor.append(imgcircle);
+        divcancel.append(imgcancel);
+        input.value='';
+    }
+}
+btnAgregarTarea.addEventListener('click',agregarTarea)
 
 
+document.addEventListener('click', function(event) {
+    if (event.target.classList.contains('svg')) {
+    event.target.src = 'checkmark-svgrepo-com.svg';
+   
+       
+}});

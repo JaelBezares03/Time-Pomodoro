@@ -1,47 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pomodoro Timer</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Kdam+Thmor+Pro&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pomodoro Timer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Kdam+Thmor+Pro&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body id="body">
 
-  
-    <div class="secciones">
-      
-      <div class="partes activo" id="focus">Focus</div>
-      <div class="partes " id="breack">Break</div>
-      <div class="partes " id="long_breack">Long Breack</div>
-    </div>
-    <section class="timer">
+
+  <div class="secciones">
+
+    <div class="partes activo" id="focus">Focus</div>
+    <div class="partes " id="breack">Break</div>
+    <div class="partes " id="long_breack">Long Breack</div>
+  </div>
+  <section class="timer">
     <div class="watcher">
       <!-- pomodoro -->
-        <p id="minutes" class="time">25</p>
-        <p class="time">:</p>
-        <p id="seconds" class="time">00</p>
+      <p id="minutes" class="time">25</p>
+      <p class="time">:</p>
+      <p id="seconds" class="time">00</p>
       <!-- breack -->
 
+
+    </div>
+    <div class="start_stop">
+      <button id="start" style="display: block;">Start</button>
+      <button id="stop" style="display: none;">Stop</button>
+    </div>
+
+    <div class="lista_tareas">
+      <h1>Task to do</h1>
+      <ul id="listado">
         
-      </div>
-      <div class="start_stop">
-        <button id="start"style="display: block;" >Start</button>
-        <button id="stop" style="display: none;" >Stop</button>
-      </div>
+      </ul>
+    </div>
+
 
 
     <div class="to-do-list">
-        <p>TO DO LIST:</p>
-        <div class="moreTask"><img src="plus-large-svgrepo-com.svg" alt=""></div>
+      <p>Add to-dos</p>
+      <input type="text" id="inputTaks" placeholder="please add your pending tasks">
+      <button id="addTask">
+        <img src="plus-large-svgrepo-com.svg" alt="">
+      </button>
+
     </div>
   </section>
 
-   
 
-    <script src="script.js"></script>
+
+  <script src="script.js"></script>
 </body>
+
 </html>
