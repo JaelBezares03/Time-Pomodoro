@@ -18,6 +18,8 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    font-family: var(--fuenteTexto);
+    position: relative;
 }
 .timer{
     display: grid;
@@ -183,7 +185,54 @@ input{
   align-items: center;
   gap: 10px;
 }
-h1{
+.title{
     width: 80%;
     margin: auto;
+}
+footer{
+    width: 100%;
+  height: 10rem;
+  position: absolute;
+  bottom: 0;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container_logo{
+    width: 6rem;
+  height: 6rem;
+}
+
+.title_ctc_ftr{
+    margin: 0;
+    font-size: 20px;
+    color: white;
+}
+.autor{
+    color: white;
+}
+a{
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+
+.links-footer{
+    display: flex;
+    gap: 1rem;
+}
+.logo_footer{
+    width: 1.5rem;
+    height: 1.5rem;
+}
+.info_contact{
+    margin: 0px;
+    margin-right: 20px;
+}
+.contacto_footer{
+    display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

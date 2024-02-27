@@ -173,6 +173,19 @@ btnAgregarTarea.addEventListener('click',agregarTarea)
 document.addEventListener('click', function(event) {
     if (event.target.classList.contains('svg')) {
     event.target.src = 'checkmark-svgrepo-com.svg';
-   
+    var parentdivcontenedor = event.target.parentElement;
+    var parentdivli = parentdivcontenedor.parentElement;
+    var parentParent = parentdivli.parentElement;
+    parentParent.style.border= '2px solid #386641';
+       parentParent.style.borderRadius = '12px ';
+       parentParent.style.backgroundColor = '#a7c957'
+
+}});
+document.addEventListener('click', function(event) {
+    if (event.target.classList.contains('svg_cancel')) {
+    var parentdivcontenedor = event.target.parentElement;
+    var parentdivli = parentdivcontenedor.parentElement;
+    
+   parentdivli.remove();
        
 }});
